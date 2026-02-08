@@ -63,7 +63,7 @@ body {
 .price-list ul {
     list-style: none;
     padding: 0;
-    /*margin: 20px 0;*/
+    margin: 20px 0;
 }
 
 .price-list li {
@@ -146,4 +146,5 @@ body {
     .mobile-call-button {
         display: block; /* Shows only on mobile devices */
     }
+
 
