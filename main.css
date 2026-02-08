@@ -1,101 +1,133 @@
-﻿
-body
-{
-	padding: 0;
-	margin: 0;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #000;
-	background: url(images/creamparch3.jpg) repeat;
-	margin: 0px;
+﻿:root {
+    --primary-color: #680114; /* Your signature maroon */
+    --accent-color: #e1b52f;  /* Gold/Yellow accent */
+    --text-color: #333;
+    --bg-color: #fcf9f2;      /* Soft cream background */
 }
 
-.heading
-{
-	color: #680114;
-	font-weight: bold;
-	letter-spacing: 0.3px;
-}
-.price_heading
-{
-	color: #ffffff;
-	font-weight: bold;
-	letter-spacing: 0.3px;
-}
-.text
-{
-	color: #680114;
-	font-size: 13px;
-	font-weight: bold;
-	letter-spacing: 0.2px;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-.price_text
-{
-	color: #680114;
-	font-size: 13px;
-	font-weight: bold;
-	letter-spacing: 0.3px;
-	padding-right: 8px;
-	padding-left: 5px;
+/* Header Styling */
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-.open
-{
-	color: #ffffff;
-	font-size: 11px;
-	font-weight: bold;
-}
-.bottomtext
-{
-	color: #680114;
-	font-size: 16px;
-	font-weight: bold;
-}
-.bottomtextold
-{
-	color: #680114;
-	font-size: 16px;
-	font-weight: bold;
-	padding-left: 10%;
-	padding-right: 10%;
-}
-a
-{
-	color: #e1b52f;
-}
-a:hover
-{
-	color: red;
+.brand h1 { margin: 0; font-size: 2rem; }
+.tagline { font-style: italic; color: var(--accent-color); margin: 5px 0; }
+
+.contact-info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
 }
 
-.adLogo
-{
-	color: White;
-	font-size: 24px;
-	padding: 5px 0 3px 0;
-	display: block;
-	font-family: Verdana;
-}
-.adLogoemail
-{
-	color: White;
-	font-size: 14px;
-	padding: 5px 0 3px 0;
-	display: block;
-	font-family: Verdana;
-}
-.adLogo a
-{
-	color:Blue;
-	font-size: 15px;
-	font-weight: bold;
-	text-decoration: none;
-	font-family: Verdana;
+.contact-info a { color: white; text-decoration: none; border-bottom: 1px solid var(--accent-color); }
+
+/* Main Layout */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.adLogo a:hover
-{
-	text-decoration: none;
-	color: #7ca800;
-	font-weight: bold;
+.location-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 768px) {
+    .location-card { grid-template-columns: 1fr; }
+}
+
+.location-details { padding: 30px; }
+
+.heading { color: var(--primary-color); margin-top: 0; border-bottom: 2px solid var(--accent-color); display: inline-block; }
+
+/* Pricing List */
+.price-list h3 { color: var(--primary-color); border-top: 1px solid #eee; padding-top: 15px; }
+
+.price-list ul { list-style: none; padding: 0; }
+
+.price-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-weight: bold;
+}
+
+.price-list li span:first-child { color: var(--primary-color); }
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #eee;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Add this to your existing main.css */
+.logo-img {
+    max-width: 100%;    /* Ensures logo doesn't overflow on phones */
+    height: auto;       /* Maintains aspect ratio */
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2)); /* Adds a modern touch */
+}
+
+.map-container {
+    background: #eee;
+    display: flex;
+}
+/* Logo Alignment Fix */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    max-width: 200px; /* Adjusted for a cleaner look */
+    height: auto;
+    border-radius: 50%; /* Optional: if you want a circular look */
+}
+
+/* Floating Call Button - Mobile Only */
+.mobile-call-button {
+    display: none; /* Hidden by default on desktop */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Green for 'Action' */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .mobile-call-button {
+        display: block; /* Shows only on mobile devices */
+    }
 }
