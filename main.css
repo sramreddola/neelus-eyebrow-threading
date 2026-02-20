@@ -102,10 +102,9 @@ body {
 
 /* Add this to your existing main.css */
 .logo-img {
-    max-width: 100%;    /* Ensures logo doesn't overflow on phones */
-    height: auto;       /* Maintains aspect ratio */
-    margin-bottom: 10px;
-    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2)); /* Adds a modern touch */
+    max-width: 200px; /* Adjusted for a cleaner look */
+    height: auto;
+    border-radius: 0; /* Removes the circular shape */
 }
 
 .map-container {
@@ -146,5 +145,6 @@ body {
     .mobile-call-button {
         display: block; /* Shows only on mobile devices */
     }
+
 
 
