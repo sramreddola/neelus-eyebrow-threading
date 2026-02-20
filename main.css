@@ -146,5 +146,31 @@ body {
         display: block; /* Shows only on mobile devices */
     }
 
+    /* New mobile fixes for price list */
+    .price-list li {
+        flex-wrap: nowrap;
+        padding: 10px 0;
+    }
+
+    .price-list li span:first-child {
+        font-size: 12px;
+        flex: 1;
+    }
+
+    .price-list li span:last-child {
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding: 2px 6px;
+    }
+
+    .price-list {
+        padding: 0 10px;
+    }
+}
+
+    
+
+
 
 
