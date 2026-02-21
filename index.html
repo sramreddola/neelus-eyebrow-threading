@@ -42,13 +42,7 @@
 
                 <div class="price-list">
                     <h3>Price List</h3>
-                    <ul>
-                        <li><span>EYEBROWS</span> <span>$14</span></li>
-                        <li><span>UPPER LIP</span> <span>$10</span></li>
-                        <li><span>CHIN</span> <span>$10</span></li>
-                        <li><span>CHEEKS</span> <span>$15</span></li>                       
-                        <li><span>FULL FACE</span> <span>$40 & Above</span></li>                        
-                    </ul>
+                    <ul id="rates-list"></ul>
                 </div>
             </div>
 
@@ -63,6 +57,29 @@
         <p>Eyebrow threading is the most natural way to remove unwanted hair. It frames the eyes and flatters the features, helping you look more beautiful.</p>
     </footer>
 <a href="tel:6172406024" class="mobile-call-button">📞 Call to Book</a>
+<script>
+    fetch('rates.json')
+        .then(function(response) { return response.json(); })
+        .then(function(rates) {
+            var list = document.getElementById('rates-list');
+            rates.forEach(function(item) {
+                var li = document.createElement('li');
+                var service = document.createElement('span');
+                service.textContent = item.service;
+                var price = document.createElement('span');
+                price.textContent = item.price;
+                li.appendChild(service);
+                li.appendChild(price);
+                list.appendChild(li);
+            });
+        })
+        .catch(function() {
+            var list = document.getElementById('rates-list');
+            var li = document.createElement('li');
+            li.textContent = 'Price list unavailable. Please call us for current rates.';
+            list.appendChild(li);
+        });
+</script>
 </body>
 
 </html>
