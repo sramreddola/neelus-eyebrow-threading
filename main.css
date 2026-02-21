@@ -130,17 +130,11 @@ body {
     color: #666;
 }
 
-/* Add this to your existing main.css */
-.logo-img {
-    max-width: 200px; /* Adjusted for a cleaner look */
-    height: auto;
-    border-radius: 0; /* Removes the circular shape */
-}
-
 .map-container {
     background: #eee;
     display: flex;
 }
+
 /* Logo Alignment Fix */
 .brand {
     display: flex;
@@ -150,9 +144,10 @@ body {
 }
 
 .logo-img {
-    max-width: 200px; /* Adjusted for a cleaner look */
+    width: 100%;
+    max-width: 400px; /* Larger on desktop for a prominent look */
     height: auto;
-    border-radius: 0; /* Rectangular shape */
+    border-radius: 0;
 }
 
 /* Floating Call Button - Mobile Only */
@@ -174,6 +169,10 @@ body {
 @media (max-width: 768px) {
     .mobile-call-button {
         display: block; /* Shows only on mobile devices */
+    }
+
+    .logo-img {
+        max-width: 200px;
     }
 
     /* Prevent the iframe's fixed width from expanding the grid track */
