@@ -152,7 +152,7 @@ body {
 .logo-img {
     max-width: 200px; /* Adjusted for a cleaner look */
     height: auto;
-    border-radius: 50%; /* Optional: if you want a circular look */
+    border-radius: 0; /* Rectangular shape */
 }
 
 /* Floating Call Button - Mobile Only */
